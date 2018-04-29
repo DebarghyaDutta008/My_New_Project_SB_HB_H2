@@ -1,4 +1,4 @@
-package com.concretepage.dao;
+	package com.concretepage.dao;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -20,7 +20,7 @@ public class ArticleDAO implements IArticleDAO {
 	@SuppressWarnings("unchecked")
 	@Override
 	public List<Article> getAllArticles() {
-		String hql = "FROM Article as article ORDER BY article.articleId";
+		String hql = "FROM Article as atcl ORDER BY atcl.articleId";
 		return (List<Article>) entityManager.createQuery(hql).getResultList();
 	}	
 	@Override
@@ -40,7 +40,7 @@ public class ArticleDAO implements IArticleDAO {
 	}
 	@Override
 	public boolean articleExists(String title, String category) {
-		String hql = "FROM Article as article WHERE article.title = ? and article.category = ?";
+		String hql = "FROM Article as atcl WHERE atcl.title = ? and atcl.category = ?";
 		int count = entityManager.createQuery(hql).setParameter(1, title)
 		              .setParameter(2, category).getResultList().size();
 		return count > 0 ? true : false;
