@@ -17,6 +17,10 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 import com.concretepage.entity.Article;
 import com.concretepage.service.IArticleService;
+<<<<<<< HEAD
+=======
+import com.concretepage.util.*;
+>>>>>>> e7742232f59cc4dd20fba3b111614b697920e4c1
 
 @Controller
 @RequestMapping("user")
@@ -26,6 +30,12 @@ public class ArticleController {
 	@GetMapping("article/{id}")
 	public ResponseEntity<Article> getArticleById(@PathVariable("id") Integer id) {
 		Article article = articleService.getArticleById(id);
+<<<<<<< HEAD
+=======
+		if (article == null) {
+			throw new ArticleNotFoundException("id"+id);
+		}
+>>>>>>> e7742232f59cc4dd20fba3b111614b697920e4c1
 		return new ResponseEntity<Article>(article, HttpStatus.OK);
 	}
 	@GetMapping("articles")

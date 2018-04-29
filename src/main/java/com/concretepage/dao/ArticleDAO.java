@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 package com.concretepage.dao;
+=======
+	package com.concretepage.dao;
+>>>>>>> e7742232f59cc4dd20fba3b111614b697920e4c1
 import java.util.List;
 
 import javax.persistence.EntityManager;

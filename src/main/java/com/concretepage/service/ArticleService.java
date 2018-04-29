@@ -37,4 +37,8 @@ public class ArticleService implements IArticleService {
 	public void deleteArticle(int articleId) {
 		articleDAO.deleteArticle(articleId);
 	}
+<<<<<<< HEAD
+=======
+
+>>>>>>> e7742232f59cc4dd20fba3b111614b697920e4c1
 }
